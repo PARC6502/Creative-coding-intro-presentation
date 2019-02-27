@@ -11,7 +11,8 @@ layout: true
 class: impact
 # Programming for Artists
 ---
-
+class: art-page
+![](assets\drawingwithparticlesbyjeromesaint-clair2009.png)
 # Drawing with particles by 01010101 (2009)
 ---
 class: art-page
@@ -70,19 +71,20 @@ class: art-page
 * Change the background to pink
 * `background(‘pink’)`
 * `noLoop();`
+.bottom-right.w-50[![](assets\OpenProcessing.png)]
 ---
 # Canvas
 * We need canvas to draw
 * We need to know how big the canvas is (width & height)
 * `createCanvas(width,height)`
 * Width and height are pixels
-.bottom-right[![](assets\noun_canvas_1095664.svg)]
+.bottom-right.w-30[![](assets\noun_canvas_1095664.svg)]
 ---
 # Circles
 * Two pieces of information
 * Location
 * Diameter
-.bottom-right[![](assets\circleDiameter.png)]
+.bottom-right.w-30[![](assets\circleDiameter.png)]
 ---
 # Coordinate system (computer)
 .contain.center[![](assets\400coordinates.png)]
@@ -102,9 +104,10 @@ ellipse(180,200,20);
 .contain.center[![](assets\concentricCircles.png)]
 ---
 # Saving and forking
-* Go through saving work on openprocessing
-* Talk about forking work 
-* Let them fork my work to try it out
+* You need to save your work, it's not saved automatically!
+* Forking work means making a duplicate, you can do this with your own work or other people's
+* If you are working on an idea and want to explore a different direction without losing the original, fork your work
+.bottom-right.w-35.mt-1[![](assets\forking.jpg)]
 ---
 # Other shapes
 * Rectangle:
@@ -113,60 +116,95 @@ rect(x,y,width,height)
 ```
  x and y refer to top left corner
 * Line:
-* line(startX, startY, endX, endY)
+```javascript
+line(startX, startY, endX, endY)
+```
 * Check p5 reference for more shapes
 * http://p5js.org/reference
 ---
 # Some grammar for code
 * Read from top to bottom
 * Semi colon at end of line
-* Case sensitive
+* Case sensitive, the following wouldn't work
+```javascript
+Ellipse(100,100,50);
+```
 * Commands to the computer look like this
-* ellipse(argument1, arguement2);
+```javascript
+ellipse(argument1, argument2);
+```
 * The brackets make the command run
 * The arguments are information we give the command, e.g. how big to make circle or where to put circle
 ---
 # Colours
 * Named colours
-* ‘darkolivegreen’
-* ‘dimgrey’
-* ‘dodgerblue’
+  * `‘darkolivegreen’`
+  * `‘dimgrey’`
+  * `‘dodgerblue’`
 * Try changing the colour of the circles by using typing the following before the circles: 
-* fill(‘purple’);
-* More colours: colours.neilorangepeel.com
+```javascript
+fill(‘purple’);
+```
+* More colours: <a target="_blank" href="http://colours.neilorangepeel.com">colours.neilorangepeel.com</a>
 ---
 # More Colour
-* Grayscale – color(100)
-* If one number provided to color command it will use grayscale
-* 0 is black, 255 is white
-* RGB – color(red,green,blue)
-* Hex codes – color(‘#6495ED’)
-------
+* Grayscale – `fill(100)`
+  * If one number provided for color command it will use grayscale
+  * 0 is black, 255 is white
+* RGB – `color(red,green,blue)`
+* Hex codes – `color(‘#6495ED’)`
+* Colour picker: <a target="_blank"  href="https://www.webfx.com/web-design/color-picker/">www.webfx.com/web-design/color-picker/</a>
+---
 # Randomness
 * Computers can come up with random numbers
-* To pick a random number you want to know the range
-* random(100);
-* This picks a number between 0 and 100
-* random(100,200);
-* This picks a number between 100 and 200
-* Try giving your circles a random size or location
+```javascript
+random(100);
+```
+  This picks a number between 0 and 100 (includes decimals)
+```javascript
+random(100,200);
+```
+  This picks a number between 100 and 200
+```javascript
+random();
+```
+  This picks a random number between 0 and 1
+
 ---
 # Random Colour
 * Lists, in a computer program, are surrounded by square brackets
-* [1,2,3,4]
+```javascript
+[1,2,3,4]
+```
 * We can have a list of named colours:
-* [‘red’, ‘green’, ‘blue’, ‘yellow’]
+```javascript
+[‘red’, ‘green’, ‘blue’, ‘yellow’]
+```
 * We can use the random instruction to tell the computer to pick a random colour
-* random([‘darkcyan’, ‘olive’, ‘yellowgreen’])
+```javascript
+random([‘darkcyan’, ‘olive’, ‘yellowgreen’])
+```
 * Try giving the circles random colours
 ---
-# Putting it together
-* background(‘#94A537’);
-* fill( random([‘green’, ‘purple’]) );
-* circle(random(800),random(500),random(100));
+.row[# Everything so far]
+
+.row[
+  .col-6.h-45[ .responsive[ ![](assets\randomCircles.png) ]] 
+  .col-6[
 * Try finding your own colours to use
 * Try having some things random and others not – for example you could pick a specific size for your circles
 * See what happens if you change the range for the randomness
+  ]
+]
+.row[
+
+```javascript
+background(‘#94A537’);
+fill( random([‘green’, ‘purple’]) );
+circle(random(800),random(500),random(100));
+```
+
+]
 ---
 # Variables
 * A way of saving a value to use later
@@ -174,103 +212,104 @@ rect(x,y,width,height)
 * Can use it to easily move connected shapes
 * Could use it to give several shapes the same random number or random colour
 * Built in variables: width, height, windowWidth, windowHeight
+
+```javascript
+var randomWidth = random(100,500);
+ellipse(100,100,randomWidth);
+ellipse(50,50,randomWidth);
+```
 ---
 # Worked Example
+.responsive.center[ ![](assets\stackedCircles.png) ]
 ---
 # Functions
 Grouping commands together
+
+```javascript
 function randomCircle() {
-fill(random([‘red’,’black’]));
-circle(random(width),random(height),100);
+  fill(random([‘red’,’black’]));
+  ellipse(random(width),random(height),100);
 }
-Can give them ‘arguments’:
-function randomCircle(diameter) {
-fill(random([‘red’,’black’]));
-circle(random(width),random(height),diameter);
-}
----
-# Challenge
-Try making this shape
-Try making its location random
-Try making its colour random
----
-# Loops
-Counts numbers
-We choose starting number
-We choose number it ends at
-We choose whether we count up, down, and how much we add or subtract each time
-Each time the loop counts it performs an action, the action can be based on the number the loop is at in the count
----
-# If this then that
----
-# Loop inside a loop
----
-
-class: impact
-
-# {{title}}
-## With a good subtitle :-)
-
----
-
-# The basics
-
-## Getting started
-
-Use [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) to write your slides. Don't be afraid, it's really easy!
-
---
-
-## Making points
-
-Look how you can make *some* points:
---
-
-- Create slides with your **favorite text editor**
---
-
-- Focus on your **content**, not the tool
---
-
-- You can finally be **productive**!
-
----
-
-# There's more
-
-## Syntax highlighting
-
-You can also add `code` to your slides:
-```html
-<div class="impact">Some HTML code</div>
 ```
 
-## CSS classes
+Can give them ‘arguments’:
 
-You can use .alt[shortcut] syntax to apply .big[some style!]
-
-...or just <span class="alt">HTML</span> if you prefer.
+```javascript
+function randomCircle(diameter) {
+  fill(random([‘red’,’black’]));
+  ellipse(random(width),random(height),diameter);
+}
+```
 
 ---
-
-# And more...
-
-## 12-column grid layout
-
-Use to the included **grid layout** classes to split content easily:
-.col-6[
-  ### Left column
-
-  - I'm on the left
-  - It's neat!
+.row[ # Challenge ]
+.row[
+  .col-6[ .responsive[![](assets\circleFlower.png)] ]
+  .col-6[
+* Try making this shape
+* Try making its location random
+* Try making its colour random
+* Try putting it into a function
+  ]
 ]
-.col-6[
-  ### Right column
+---
+# Loops
+* Counts numbers
+* We choose starting number
+* We choose number it ends at
+* We choose whether we count up, down, and how much we add or subtract each time
+* Each time the loop counts it performs an action, the action can be based on the number the loop is at in the count
 
-  - I'm on the right
-  - I love it!
+```javascript
+for (var size=200; size>0; size=size-50) {
+  ellipse(200,200,size);
+}
+```
+
+---
+# If this then that
+* To choose whether or not to do something based on some condition we use an if-else statement 
+* This statement checks a condition and performs an action if that condition is met, otherwise (else) it does another action, it will look something like this:
+
+```javascript
+if (random()>0.5) {
+  doAnAction
+}
+else {
+  doSomeOtherAction
+}
+```
+The above code will do each action about half the time
+---
+# Drawing in a grid: Loop inside a loop
+* With one loop we can draw lines that go across page
+
+```javascript
+var step = 20;
+for (var x=0;X<width;x+=step) {
+  for (var y=0;y<height;y+=step) {
+    rect(x,y,step,step);
+  }
+}
+```
+---
+.row[ # Final challenge ]
+.row[
+  .col-3[ .responsive[ ![](assets\my10print2.png) ] ]
+  .col-1[ ![]() ]
+  .col-8[
+* Pattern created by randomly drawing either a left diagonal or right diagonal in a grid
+* Play with the code and create variations
+
+```Javascript
+for (var x=0;x<width;x+=step) {
+  for (var y=0;y<width;y+=step) {
+    // Your line commands go here
+  }
+}
+strokeWeight(3); 
+stroke("red");
+line(startingX,startingY,endingX,endingY);
+```
+  ]
 ]
-
-## Learn the tricks
-
-See the [wiki](https://github.com/gnab/remark/wiki) to learn more of what you can do with .alt[Remark.js]
