@@ -9,13 +9,13 @@ h1, h2, h3, h4, h5, h6 {
   font-family: Arial, Helvetica, sans-serif; }
 
 h1 {
-  color: #3F51B5; }
+  color: #c821bf; }
 
 h2 {
-  color: #009688; }
+  color: #AD98B0; }
 
 h3 {
-  color: #757575; }
+  color: #AD98B0; }
 
 li {
   margin-bottom: .25em; }
@@ -23,8 +23,8 @@ li {
 pre, code {
   text-align: left;
   font-family: "Lucida Console", Monaco, monospace;
-  color: #009688;
-  background: #F8F8F8; }
+  color: #89798B;
+  background: #F3F5ED; }
 
 a, a:visited, a:hover, a:active {
   color: #212121; }
@@ -35,7 +35,7 @@ img {
 blockquote {
   border-left: 8px solid;
   padding-left: .5em;
-  color: #757575;
+  color: #AD98B0;
   text-align: left;
   margin: 1em 0; }
   blockquote > p {
@@ -45,7 +45,7 @@ blockquote {
   font-size: .9em; }
 
 .remark-container {
-  background: #333; }
+  background: #2B2D4C; }
 
 .remark-slide-scaler {
   box-shadow: none; }
@@ -60,7 +60,7 @@ blockquote {
   background-size: cover; }
 
 .remark-slide-number {
-  color: #FFF;
+  color: #F3F5ED;
   right: 1em;
   opacity: .6;
   font-size: 0.8em;
@@ -69,16 +69,17 @@ blockquote {
     display: none; }
 
 .impact {
-  background-color: #3F51B5;
+  background: url(assets\\my10printwidecoloured.png) #c821bf;
+  box-shadow: inset 0 0 0 9999px rgba(0, 0, 0, 0.5);
   vertical-align: middle;
   text-align: center; }
   .impact, .impact h1, .impact h2 {
-    color: #FFF; }
+    color: #F3F5ED; }
   .impact h1 {
     font-size: 128px; }
 
 .art-page {
-  background-color: #333; }
+  background-color: #2B2D4C; }
   .art-page p {
     text-align: center; }
   .art-page img, .art-page video {
@@ -88,14 +89,14 @@ blockquote {
     text-align: center; }
 
 .code-embed {
-  background-color: #333;
+  background-color: #2B2D4C;
   padding: 0; }
   .code-embed iframe {
     width: 100%;
     height: 681px; }
 
 .full, .full h1, .full h2 {
-  color: #FFF; }
+  color: #F3F5ED; }
 
 .fulliframe {
   height: calc(66.66667% - 1.2em);
@@ -105,8 +106,8 @@ blockquote {
   border: 0; }
 
 .bottom-bar {
-  background-color: #3F51B5;
-  color: #FFF;
+  background-color: #c821bf;
+  color: #F3F5ED;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -338,13 +339,13 @@ blockquote {
   text-align: justify; }
 
 .primary {
-  color: #3F51B5; }
+  color: #c821bf; }
 
 .alt {
-  color: #009688; }
+  color: #AD98B0; }
 
 .em {
-  color: #757575; }
+  color: #89798B; }
 
 .thin {
   font-weight: 200; }
@@ -359,10 +360,10 @@ blockquote {
   font-size: .8em; }
 
 .dark-bg {
-  background-color: #333; }
+  background-color: #2B2D4C; }
 
 .alt-bg {
-  background-color: #009688; }
+  background-color: #AD98B0; }
 
 .row {
   width: 100%; }

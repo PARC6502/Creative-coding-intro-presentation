@@ -13,7 +13,7 @@ class: impact
 ---
 class: art-page
 ![](assets\drawingwithparticlesbyjeromesaint-clair2009.png)
-# Drawing with particles by 01010101 (2009)
+## Drawing with particles by 01010101 (2009)
 ---
 class: art-page
 ![](assets\DavidDessens-CartesianCreatures.jpg)
@@ -282,7 +282,8 @@ else {
 The above code will do each action about half the time
 ---
 # Drawing in a grid: Loop inside a loop
-* With one loop we can draw lines that go across page
+* One loops creates the "columns" or the x-values
+* One loop creates the "rows" or the y-values
 
 ```javascript
 var step = 20;
