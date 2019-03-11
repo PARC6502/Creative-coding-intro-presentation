@@ -228,7 +228,10 @@ blockquote {
   .w-#{$i*5} {width: 5% * $i; display: block;}
 }
 @for $i from 1 through 20 {
-  .h-#{$i*5} {height: 0.05 * $i * $height; }
+  .h-#{$i*5} {height: 0.05 * $i * $height; display: block;}
+}
+@for $i from 1 through 10 {
+  .mb-#{$i} {padding-bottom: $i*1em; }
 }
 @for $i from 1 through 10 {
   .mt-#{$i} {margin-top: $i*1em; }

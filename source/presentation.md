@@ -110,7 +110,7 @@ ellipse(180,200,20);
 ```
 ---
 # Challenge 1 - Concentric circles
-.contain.center[![](assets\concentricCircles.png)]
+.responsive.h-70.center[![](assets\concentricCircles.png)]
 ---
 # Saving and forking
 * You need to save your work, it's not saved automatically!
@@ -134,8 +134,8 @@ line(startX, startY, endX, endY)
 ---
 # Some grammar for code
 * Read from top to bottom
-* Semi colon at end of line
-* Case sensitive, the following **wouldn't** work
+* Semi colon at end of line - like a full stop
+* Case sensitive, the following **wouldn't** work (notice the capital E)
 
 ```javascript
 Ellipse(100,100,50);
@@ -147,7 +147,6 @@ Ellipse(100,100,50);
 ellipse(argument1, argument2);
 ```
 
-* The brackets make the command run
 * The arguments are information we give the command, e.g. how big to make circle or where to put circle
 ---
 # Colours
@@ -174,7 +173,7 @@ stroke("green");
 * Grayscale – `fill(100)`
   * If one number provided for color command it will use grayscale
   * 0 is black, 255 is white
-* RGB – `color(red,green,blue)`
+* [RGB](https://editor.p5js.org/PARC6502/present/7eyBdOWM7) – `color(red,green,blue)`
 * Hex codes – `color(‘#6495ED’)`
 * Colour picker: <a target="_blank"  href="https://www.webfx.com/web-design/color-picker/">www.webfx.com/web-design/color-picker/</a>
 ---
