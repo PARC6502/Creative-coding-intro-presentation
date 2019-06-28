@@ -76,7 +76,7 @@ class: art-page
 * Change the background to pink
   * `background(‘pink’)`
 * Stop it from looping
-  * `noLoop();`
+  * `noLoop()`
 
 .bottom-right.bottom-3.w-50[![](assets\OpenProcessing.png)]
 ---
@@ -104,9 +104,9 @@ class: art-page
 * Examples:
 
 ```javascript
-ellipse(0,0,200);
-ellipse(150,120,50);
-ellipse(180,200,20);
+ellipse(0,0,200)
+ellipse(150,120,50)
+ellipse(180,200,20)
 ```
 ---
 # Challenge 1 - Concentric circles
@@ -134,20 +134,19 @@ line(startX, startY, endX, endY)
 ---
 # Some grammar for code
 * Read from top to bottom
-* Semi colon at end of line - like a full stop
 * Case sensitive, the following **wouldn't** work (notice the capital E)
 
 ```javascript
-Ellipse(100,100,50);
+Ellipse(100,100,50)
 ```
 
 * Commands to the computer look like this
 
 ```javascript
-ellipse(argument1, argument2);
+ellipse(argument1, argument2)
 ```
 
-* The arguments are information we give the command, e.g. how big to make circle or where to put circle
+* The *arguments* are information we give the command, e.g. how big to make circle or where to put circle
 ---
 # Colours
 * There are many named colours, for example:
@@ -157,13 +156,13 @@ ellipse(argument1, argument2);
 * You can change the fill colour of shapes:
 
 ```javascript
-fill('blue');
+fill('blue')
 ```
 
 * You can change the stroke colour
 
 ```javascript
-stroke("green");
+stroke("green")
 ```
 
 * More colours: <a target="_blank" href="http://colours.neilorangepeel.com">colours.neilorangepeel.com</a>
@@ -182,17 +181,17 @@ stroke("green");
   * This picks a number between 0 and 100 (includes decimals):
 
 ```javascript
-random(100);
+random(100)
 ```
   * This picks a number between 100 and 200  
 
 ```javascript
-random(100,200);
+random(100,200)
 ```
   * This picks a random number between 0 and 1
 
 ```javascript
-random();
+random()
 ```
 ---
 # Random Colour
@@ -226,9 +225,9 @@ random([‘darkcyan’, ‘olive’, ‘yellowgreen’])
 .row[
 
 ```javascript
-background(‘#94A537’);
-fill( random([‘green’, ‘purple’]) );
-circle(random(800),random(500),random(100));
+background(‘#94A537’)
+fill( random([‘green’, ‘purple’]) )
+circle(random(800),random(500),random(100))
 ```
 
 ]
@@ -243,9 +242,9 @@ circle(random(800),random(500),random(100));
   * `windowHeight` - the height of the browser window
 
 ```javascript
-var randomWidth = random(100,500);
-ellipse(100,100,randomWidth);
-ellipse(50,50,randomWidth);
+let randomWidth = random(100,500)
+ellipse(100,100,randomWidth)
+ellipse(50,50,randomWidth)
 ```
 ---
 # Worked Example
@@ -256,8 +255,8 @@ Grouping commands together
 
 ```javascript
 function randomCircle() {
-  fill(random([‘red’,’black’]));
-  ellipse(random(width),random(height),100);
+  fill(random([‘red’,’black’]))
+  ellipse(random(width),random(height),100)
 }
 ```
 
@@ -265,8 +264,8 @@ Can give them ‘arguments’:
 
 ```javascript
 function randomCircle(diameter) {
-  fill(random([‘red’,’black’]));
-  ellipse(random(width),random(height),diameter);
+  fill(random([‘red’,’black’]))
+  ellipse(random(width),random(height),diameter)
 }
 ```
 ???
@@ -291,8 +290,8 @@ Apply function to stacked circles
 * Each time the loop counts it performs an action, the action can be based on the number the loop is at in the count
 
 ```javascript
-for (var size=200; size>0; size=size-50) {
-  ellipse(200,200,size);
+for (let size=200; size>0; size=size-50) {
+  ellipse(200,200,size)
 }
 ```
 ???
@@ -318,31 +317,31 @@ The above code will do each action about half the time
 * The step is the height and width of each square in the grid
 
 ```javascript
-var step = 20;
-for (var x=0;X<width;x+=step) {
-  for (var y=0;y<height;y+=step) {
-    rect(x,y,step,step);
+let step = 20
+for (let x=0;X<width;x+=step) {
+  for (let y=0;y<height;y+=step) {
+    rect(x,y,step,step)
   }
 }
 ```
 ---
 .row[ # Final challenge ]
 .row[
-  .col-3[ .responsive[ ![](assets\my10print2.png) ] ]
+  .col-3[ .responsive[ ![](assets\tiledLines.png) ] ]
   .col-1[ ![]() ]
   .col-8[
 * Pattern created by randomly drawing either a left diagonal or right diagonal in a grid
 * Play with the code and create variations
 
 ```Javascript
-for (var x=0; x < width; x = x + 10) {
-  for (var y=0; y < height;y = y + 10) {
+for (let x=0; x < width; x = x + 10) {
+  for (let y=0; y < height;y = y + 10) {
     // Your line commands go here
   }
 }
-strokeWeight(3); 
-stroke("red");
-line(startingX,startingY,endingX,endingY);
+strokeWeight(3)
+stroke("red")
+line(startingX,startingY,endingX,endingY)
 ```
   ]
 ]
